@@ -471,6 +471,12 @@ subsystem mem_buf_vm
 # NPU device
 /dev/msm_npu             0644   system     system
 
+# USB autosuspend/wakeup settings
+/sys/bus/usb/devices/*      power/autosuspend          0660  system  usb
+/sys/bus/usb/devices/*      power/autosuspend_delay_ms 0660  system  usb
+/sys/bus/usb/devices/*      power/control              0660  system  usb
+/sys/bus/usb/devices/*      power/wakeup               0660  system  usb
+
 # USB role switch
 /sys/class/dual_role_usb/*	data_role	0660	system	system
 /sys/class/dual_role_usb/*	power_role	0660	system	system
